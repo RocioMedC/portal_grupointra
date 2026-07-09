@@ -107,7 +107,7 @@
       <div class="fin-card fin-card-pad">
         <div style="display:flex; align-items:center; justify-content:space-between; margin-bottom:14px;">
           <span class="fin-card-title" style="font-size:16px;">Honorarios pendientes</span>
-          <span class="fin-badge fin-badge-pendiente">{{ pendientes|length }} terapeutas</span>
+          <span class="fin-badge fin-badge-pendiente">{{ pendientes|length }} terapeuta{{ pendientes|length|pluralize }}</span>
         </div>
         {% for p in pendientes %}
         <div class="fin-list-row" style="padding:9px 0;">

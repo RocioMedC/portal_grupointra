@@ -1,0 +1,36 @@
+{% load static %}<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Sin permiso | Grupo Intra</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:opsz,wght@8..60,600&family=Work+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  * { box-sizing: border-box; }
+  html, body { margin: 0; padding: 0; }
+  body {
+    font-family: 'Work Sans', system-ui, sans-serif; color: #1B2C4F; background-color: #F3F5F9;
+    background-image: radial-gradient(circle, rgba(27,44,79,0.055) 1px, transparent 1.4px);
+    background-size: 22px 22px; min-height: 100vh; display: flex; align-items: center; justify-content: center; padding: 20px;
+  }
+  .box { text-align: center; max-width: 420px; }
+  .badge { width: 64px; height: 64px; border-radius: 50%; background: #fff; border: 1px solid #E6EAF2; display: flex; align-items: center; justify-content: center; margin: 0 auto 20px; box-shadow: 0 10px 24px -14px rgba(27,44,79,.4); }
+  h1 { font-family: 'Source Serif 4', serif; font-size: 24px; font-weight: 600; margin: 0 0 10px; }
+  p { font-size: 14px; color: #6B7689; line-height: 1.5; margin: 0 0 24px; }
+  a { display: inline-flex; align-items: center; gap: 8px; background: #1B2C4F; color: #fff; text-decoration: none; padding: 11px 20px; border-radius: 999px; font-size: 13.5px; font-weight: 600; }
+  a:hover { background: #27406f; }
+</style>
+</head>
+<body>
+  <div class="box">
+    <div class="badge">
+      <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#8A93A6" stroke-width="1.8"><rect x="4" y="11" width="16" height="9" rx="2"></rect><path d="M8 11V8a4 4 0 0 1 8 0v3"></path></svg>
+    </div>
+    <h1>No tienes permiso para ver esto</h1>
+    <p>Tu usuario no pertenece al grupo requerido para este módulo. Si crees que esto es un error, contacta a Sistemas.</p>
+    <a href="{% url 'dashboard' %}">Volver al panel</a>
+  </div>
+</body>
+</html>
